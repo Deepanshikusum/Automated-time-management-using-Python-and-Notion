@@ -25,7 +25,7 @@ def audio_to_text(audio):
     try:
         text = r.recognize_google(audio)
     except sr.UnknownValueError:
-        print("Speech recognition could not understand audio")
+        print("could not understand audio")
     except sr.RequestError:
         print("could not request results from API")
     return text
@@ -38,7 +38,7 @@ def play_sound(text):
         playsound(tempfile)
         os.remove(tempfile)
     except AssertionError:
-        print("could not play sound")
+        print("could not play sound sorry :(")
 
 
 
